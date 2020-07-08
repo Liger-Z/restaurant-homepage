@@ -1,5 +1,6 @@
-import { siteHeader, descriptionWrapper } from './initial_load.js'
+import { initialLoad } from './initial_load.js';
+import { loadContact } from './contact_tab.js';
 
-const contentDiv = document.querySelector("#content");
-contentDiv.appendChild(siteHeader);
-contentDiv.appendChild(descriptionWrapper);
+initialLoad();
+
+

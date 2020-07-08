@@ -27,6 +27,34 @@ html, body {
   margin-left: 20px;
 }
 
+.pizza-icon {
+  height: 80px;
+  margin-left: 10px;
+}
+
+.tab-wrapper {
+  display: flex;
+  height: 60px;
+  margin: 120px auto 0px auto;
+  width: 874px;
+}
+
+.tab-button {
+  height: 60px;
+  width: 100px;
+  padding: 5px 20px;
+  background-color: #540B0E;
+  border: 0px solid transparent;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.tab-button:hover {
+  background-color: #9E2A2B;
+  transition: 0.15s linear;
+}
+
 .description-background {
   background-image: url(../images/pizza.jpg);
   filter: blur(3px);
@@ -39,12 +67,13 @@ html, body {
 }
 
 .description-wrapper {
-  border: 5px solid black;
+  position: relative;
+  border: 5px solid #9E2A2B;
   align-items: center;
   justify-content: center;
   width: 874px;
   height: 588.7px;
-  margin: 80px auto;
+  margin: 0px auto;
 }
 
 .description-text {
@@ -55,7 +84,7 @@ html, body {
   color: white;
   margin-bottom: 40px;
   position: absolute;
-  top: 31%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
