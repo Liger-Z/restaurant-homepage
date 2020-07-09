@@ -1,3 +1,5 @@
+import { loadDescription } from "./description_tab";
+
 /* initialLoad creates all the html elements that are needed the first
 time the page is loaded.
 */
@@ -19,10 +21,10 @@ function initialLoad() {
 
   const tabWrapper = document.createElement("div");
   tabWrapper.classList.add("tab-wrapper");
-  const blurbTab = document.createElement("button");
-  blurbTab.classList.add("blurb-tab");
-  blurbTab.classList.add("tab-button");
-  blurbTab.textContent = "Blurb";
+  const descriptionTab = document.createElement("button");
+  descriptionTab.classList.add("description-tab");
+  descriptionTab.classList.add("tab-button");
+  descriptionTab.textContent = "Description";
   const menuTab = document.createElement("button");
   menuTab.classList.add("menu-tab");
   menuTab.classList.add("tab-button");
@@ -32,27 +34,19 @@ function initialLoad() {
   contactTab.classList.add("tab-button");
   contactTab.textContent = "Contact";
 
-  tabWrapper.appendChild(blurbTab);
+  tabWrapper.appendChild(descriptionTab);
   tabWrapper.appendChild(contactTab);
   tabWrapper.appendChild(menuTab);
 
+  const tabContentWrapper = document.createElement("div");
+  tabContentWrapper.classList.add("tab-content-wrapper")
 
-  const descriptionWrapper = document.createElement("div")
-  descriptionWrapper.classList.add("description-wrapper");
-  const descriptionBackground = document.createElement("div");
-  descriptionBackground.classList.add("description-background");
-  const descriptionText = document.createElement("div");
-  descriptionText.classList.add("description-text");
-  const description = document.createElement("p");
-  description.classList.add("description");
-  description.textContent = "Here at Liger's Pizzeria we bring you only the tastiest pizza."
-  descriptionText.appendChild(description);
-  descriptionWrapper.appendChild(descriptionBackground);
-  descriptionWrapper.appendChild(descriptionText);
+  const descriptionWrapper = loadDescription();
+  tabContentWrapper.appendChild(descriptionWrapper);
 
   contentDiv.appendChild(siteHeader);
   contentDiv.appendChild(tabWrapper);
-  contentDiv.appendChild(descriptionWrapper);
+  contentDiv.appendChild(tabContentWrapper);
 };
 
 export { initialLoad };

@@ -39,6 +39,7 @@ function loadContact() {
   contactWrapper.appendChild(phoneHeader);
   contactWrapper.appendChild(phoneNumber);
 
+  return contactWrapper;
 }
 
 export { loadContact };
