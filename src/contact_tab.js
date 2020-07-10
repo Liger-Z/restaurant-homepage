@@ -66,7 +66,7 @@ function createForm() {
 
   const formHeader = document.createElement("h2");
   formHeader.classList.add("contact-header");
-  formHeader.textContent = "CONTACT US"
+  formHeader.textContent = "Contact Us"
 
   const form = document.createElement("form");
 

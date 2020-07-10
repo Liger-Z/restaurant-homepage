@@ -1,6 +1,7 @@
 import { initialLoad } from './initial_load.js';
 import { loadContact } from './contact_tab.js';
 import { loadHome } from './home_tab';
+import { loadMenu } from './menu_tab';
 
 initialLoad();
 
@@ -8,6 +9,7 @@ const tabController = (() => {
   const _tabContentWrapper = document.querySelector(".tab-content-wrapper")
   const _homeTab = document.querySelector(".home-tab");
   const _contactTab = document.querySelector(".contact-tab");
+  const _menuTab = document.querySelector(".menu-tab");
 
 
   const _changeTab = (tab) => {
@@ -18,8 +20,7 @@ const tabController = (() => {
 
   _homeTab.addEventListener("click", () => {_changeTab(loadHome)});
   _contactTab.addEventListener("click", () => {_changeTab(loadContact)});
-
+  _menuTab.addEventListener("click", () => {_changeTab(loadMenu)});
   return {
   }
 })();
-
