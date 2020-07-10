@@ -1,12 +1,12 @@
 import { initialLoad } from './initial_load.js';
 import { loadContact } from './contact_tab.js';
-import { loadDescription } from './description_tab';
+import { loadHome } from './home_tab';
 
 initialLoad();
 
 const tabController = (() => {
   const _tabContentWrapper = document.querySelector(".tab-content-wrapper")
-  const _descriptionTab = document.querySelector(".description-tab");
+  const _homeTab = document.querySelector(".home-tab");
   const _contactTab = document.querySelector(".contact-tab");
 
 
@@ -16,7 +16,7 @@ const tabController = (() => {
     _tabContentWrapper.appendChild(tabContent);
   }
 
-  _descriptionTab.addEventListener("click", () => {_changeTab(loadDescription)});
+  _homeTab.addEventListener("click", () => {_changeTab(loadHome)});
   _contactTab.addEventListener("click", () => {_changeTab(loadContact)});
 
   return {

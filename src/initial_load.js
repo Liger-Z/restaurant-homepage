@@ -1,4 +1,4 @@
-import { loadDescription } from "./description_tab";
+import { loadHome } from "./home_tab";
 
 /* initialLoad creates all the html elements that are needed the first
 time the page is loaded.
@@ -21,10 +21,11 @@ function initialLoad() {
 
   const tabWrapper = document.createElement("div");
   tabWrapper.classList.add("tab-wrapper");
-  const descriptionTab = document.createElement("button");
-  descriptionTab.classList.add("description-tab");
-  descriptionTab.classList.add("tab-button");
-  descriptionTab.textContent = "Description";
+  const homeTab = document.createElement("button");
+  homeTab.classList.add("home-tab");
+  homeTab.classList.add("tab-button");
+  homeTab.classList.add("tab-active");
+  homeTab.textContent = "Home";
   const menuTab = document.createElement("button");
   menuTab.classList.add("menu-tab");
   menuTab.classList.add("tab-button");
@@ -34,15 +35,15 @@ function initialLoad() {
   contactTab.classList.add("tab-button");
   contactTab.textContent = "Contact";
 
-  tabWrapper.appendChild(descriptionTab);
-  tabWrapper.appendChild(contactTab);
+  tabWrapper.appendChild(homeTab);
   tabWrapper.appendChild(menuTab);
+  tabWrapper.appendChild(contactTab);
 
   const tabContentWrapper = document.createElement("div");
   tabContentWrapper.classList.add("tab-content-wrapper")
 
-  const descriptionWrapper = loadDescription();
-  tabContentWrapper.appendChild(descriptionWrapper);
+  const homeWrapper = loadHome();
+  tabContentWrapper.appendChild(homeWrapper);
 
   contentDiv.appendChild(siteHeader);
   contentDiv.appendChild(tabWrapper);

@@ -1,7 +1,7 @@
 html, body {
   background-color: #FFF3B0;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: "Cabin";
   box-sizing: border-box;
   height: 100%;
 }
@@ -36,7 +36,7 @@ html, body {
   display: flex;
   height: 60px;
   margin: 120px auto 0px auto;
-  width: 874px;
+  width: 70%;
 }
 
 .tab-button {
@@ -48,35 +48,43 @@ html, body {
   color: white;
   font-size: 1.2em;
   font-weight: bold;
+  font-family: "Cabin";
 }
 
 .tab-button:hover {
   background-color: #9E2A2B;
-  transition: 0.15s linear;
+  transition: 0.3s linear;
 }
 
-.description-background {
-  background-image: url(../images/pizza.jpg);
-  filter: blur(3px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 864px;
-  height: 578.7px;
+.tab-active {
+  background-color: #9E2A2B;
+  transition: 0.3s linear;
+}
+
+.tab-content-wrapper {
+  position: relative;
+  width: 70%;
   margin: 0 auto;
 }
 
-.description-wrapper {
-  position: relative;
+.home-background {
+  background-size: cover;
+  width: 1296px;
+  height: 868.05px;
+}
+
+.home-wrapper {
+  position: absolute;
   border: 5px solid #9E2A2B;
   align-items: center;
   justify-content: center;
-  width: 874px;
-  height: 588.7px;
-  margin: 0px auto;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-.description-text {
+.home-text {
   background-color: rgba(0,0,0,0.4);
   text-align: center;
   font-size: 2em;
@@ -84,9 +92,62 @@ html, body {
   color: white;
   margin-bottom: 40px;
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
   border: 2px solid white;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  border: 5px solid #9E2A2B;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.store-info-wrapper {
+  width: 50%;
+}
+
+.form-wrapper {
+  width: 50%;
+}
+
+.contact-header {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.contact-text {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  margin-top: 5px;
+  border: 2px solid rgb(165, 163, 163);
+  border-radius: 3px;
+  font-family: "cabin";
+  font-size: 1.1em;
+}
+
+.message-box {
+  height: 120px;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border: 2px solid rgb(165, 163, 163);
+  border-radius: 5px;
+  font-family: "cabin";
+  font-size: 1.1em;
+  resize: none;
 }
