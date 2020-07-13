@@ -45,9 +45,19 @@ function initialLoad() {
   const homeWrapper = loadHome();
   tabContentWrapper.appendChild(homeWrapper);
 
+  const siteFooter = document.createElement("div");
+  siteFooter.classList.add("site-footer");
+
+  const push = document.createElement("div");
+  push.classList.add("push");
+  
   contentDiv.appendChild(siteHeader);
   contentDiv.appendChild(tabWrapper);
   contentDiv.appendChild(tabContentWrapper);
+  contentDiv.appendChild(push);
+
+  const body = document.getElementsByTagName("BODY")[0];
+  body.appendChild(siteFooter);
 };
 
 export { initialLoad };
