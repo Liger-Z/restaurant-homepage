@@ -1,5 +1,5 @@
 html, body {
-  background-color: #FFF3B0;
+  background-color: #FFFCEB;
   font-size: 14px;
   font-family: "Cabin";
   box-sizing: border-box;
@@ -8,6 +8,11 @@ html, body {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+#content {
+  min-height: 100%;
+  margin-bottom: -95px;
 }
 
 .site-header {
@@ -36,7 +41,7 @@ html, body {
   display: flex;
   height: 60px;
   margin: 120px auto 0px auto;
-  width: 70%;
+  width: 80%;
 }
 
 .tab-button {
@@ -61,16 +66,18 @@ html, body {
   transition: 0.3s linear;
 }
 
-.tab-content-wrapper {
-  position: relative;
-  width: 70%;
-  margin: 0 auto;
+.home-tab {
+  border-top-left-radius: 10px;
 }
 
-.home-background {
-  background-size: cover;
-  width: 1296px;
-  height: 868.05px;
+.contact-tab {
+  border-top-right-radius: 10px;
+}
+
+.tab-content-wrapper {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .home-wrapper {
@@ -82,21 +89,14 @@ html, body {
   height: 500px;
   margin: 0 auto;
   margin-bottom: 100px;
+  border-radius: 0px 10px 10px 10px;
 }
 
 .home-text {
-  background-color: rgba(0,0,0,0.4);
   text-align: center;
   font-size: 2em;
   font-weight: bold;
-  color: white;
-  margin-bottom: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border: 2px solid white;
+  color: black;
 }
 
 .contact-wrapper {
@@ -106,6 +106,7 @@ html, body {
   border: 5px solid #9E2A2B;
   width: 100%;
   margin: 0 auto;
+  border-radius: 0px 10px 10px 10px;
   padding: 10px 20px;
 }
 
@@ -130,35 +131,79 @@ html, body {
 
 input {
   width: 100%;
+  max-width: 400px;
   height: 35px;
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
   border: 2px solid rgb(165, 163, 163);
   border-radius: 3px;
-  font-family: "cabin";
+  font-family: "Noto Sans";
   font-size: 1.1em;
 }
 
 .message-box {
   height: 120px;
   width: 100%;
+  max-width: 500px;
   padding: 10px;
   margin-bottom: 10px;
   margin-top: 5px;
   border: 2px solid rgb(165, 163, 163);
   border-radius: 5px;
-  font-family: "cabin";
+  font-family: "Noto Sans";
   font-size: 1.1em;
   resize: none;
 }
 
 .menu-wrapper {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 15px 15px;
+  justify-content: center;
+  align-items: stretch;
   position: absolute;
   border: 5px solid #9E2A2B;
   width: 100%;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 30px;
+  border-radius: 0px 10px 10px 10px;
+}
+
+.pizza-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  background-color: #335C67;
+  color: white;
+  font-family: "Cabin";
+  font-weight: bold;
+  font-size: 1.2em;
+  box-shadow: 0px 1px 2px black;
+  border-radius: 5px;
+}
+
+.pizza-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: "Galada";
+}
+
+.pizza-price {
+  position: absolute;
+  right: 13px;
+  top: 18px;
+}
+
+.push {
+  height: 95px;
+}
+
+.site-footer {
+  width: 100%;
+  height: 95px;
+  background-color: #E09F3E;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-top-left-radius: 50px;
 }
