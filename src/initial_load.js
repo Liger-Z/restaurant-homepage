@@ -47,14 +47,10 @@ function initialLoad() {
 
   const siteFooter = document.createElement("div");
   siteFooter.classList.add("site-footer");
-
-  const push = document.createElement("div");
-  push.classList.add("push");
   
   contentDiv.appendChild(siteHeader);
   contentDiv.appendChild(tabWrapper);
   contentDiv.appendChild(tabContentWrapper);
-  contentDiv.appendChild(push);
 
   const body = document.getElementsByTagName("BODY")[0];
   body.appendChild(siteFooter);
